@@ -7,6 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(drop_math_test test.cpp)
 
-# How you would use dropMath in your own code:
-find_package(dropMath CONFIG REQUIRED)
 target_link_libraries(drop_math_test PRIVATE dropMath::dropMath)

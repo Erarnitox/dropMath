@@ -5,6 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(examples examples.cpp)
 
-# How you would use dropMath in your own code:
-find_package(dropMath CONFIG REQUIRED)
 target_link_libraries(examples PRIVATE dropMath::dropMath)
