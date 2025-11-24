@@ -2255,29 +2255,25 @@ namespace math{
 
 		inline 
 		auto getXMin() const -> float {
-			[[likely]]
-			if(width > 0) return x;
+			if(width > 0) [[likely]] return x;
 			return x+width;
 		}
 
 		inline 
 		auto getXMax() const -> float {
-			[[likely]]
-			if(width > 0) return x+width;
+			if(width > 0) [[likely]] return x+width;
 			return x;
 		}
 
 		inline 
 		auto getYMax() const -> float {
-			[[likely]]
-			if(height > 0) return y+height;
+			if(height > 0) [[likely]] return y+height;
 			return y;
 		}
 
 		inline 
 		auto getYMin() const -> float {
-			[[likely]]
-			if(height > 0) return y;
+			if(height > 0) [[likely]] return y;
 			return y+height;
 		}
 	};
@@ -2390,11 +2386,9 @@ namespace math{
 	inline 
     auto lerp(const float& goal, const float& current, const float& step)-> float {
     	auto dif{ goal - current };
-    	[[likely]]
-    	if(dif > step)  return current+step;
+    	if(dif > step) [[likely]] return current+step;
     	if(dif < -step) return current-step;
-    	[[unlikely]]
-    	return goal;
+    	else [[unlikely]] return goal;
     }
 
     inline
@@ -2457,8 +2451,7 @@ namespace math{
 
     inline 
     auto powZ(const float& b, const int& exp)-> float {
-        [[unlikely]]
-        if(b == 0){
+        if(b == 0) [[unlikely]] {
             if(exp<0){
                 return std::round_toward_infinity;
             }
@@ -2467,7 +2460,6 @@ namespace math{
         if(exp == 0) return 0;
 
         auto base{b};
-        [[likely]]
         for(int i{1}; i<exp; ++i){
             base *= b;
         }

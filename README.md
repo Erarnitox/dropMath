@@ -81,7 +81,7 @@ You should now have the header file `dropMath.hpp` in your project directory.
 You should now be able to include the header from the same directory in your
 source files like this:
 ```C++
-#include "dropMath.cpp" //include dropMath
+#include "dropMath.hpp" //include dropMath
 
 int main(){
 	/*Drop Math can now be used.
