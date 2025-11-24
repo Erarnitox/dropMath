@@ -105,4 +105,5 @@ We do also have a YouTube Playlist with usage examples:
 [![ExamplePlaylist](./.res/thumb.png)](https://youtube.com/playlist?list=PLTjUlazALHSAA-VpiKxJCDdx2MRvEnBw1)
 
 ### Contact
-[![Discord](https://badgen.net/discord/online-members/89K69wtz8F)](https://discord.gg/89K69wtz8F)
+**Discord:** `@erarnitox`
+**X:** `@erarnitox`
